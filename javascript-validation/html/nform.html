@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title> form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="../src/js/newjs.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h3>Registration Page</h3>
+        </div>
+            <form class="form-horizontal" name= "Form" method="POST"  action= "" onSubmit="return validate();" >
+                <div class="form-group">
+                        <label class= "col-xs-3" > Firstname:<sup style="color:#F00">*</sup></label> 
+                        <input type="text" id="fn"  onblur="chkblnk('fn','error0')"/>
+                        <span class="col" id="error0" style="color:red"></span>
+                </div>
+                <div class="form-group">    
+                        <label class= "col-xs-3"> Lastname:<sup style="color:#F00">*</sup></label> <input type="text" id="ln" onblur="chkblnk('ln','error1')"/>
+                        <span class="col" id="error1" style="color:red"></span>
+                </div>    
+                <div class="form-group">    
+                        <label class= "col-xs-3"> Email id:<sup style="color:#F00">*</sup></label> <input type="text" id="e" onblur="chkblnk('e' , 'error2')"/>
+                        <span class="col" id="error2" style="color:red"></span>
+                </div>   
+                <div class="form-group">   
+                       <label class= "col-xs-3"> Password :<sup style="color:#F00">*</sup></label> <input type="password" id="p"  onblur="chkblnk('p','error3')"/>
+                        <span class="col" id="error3" style="color:red"></span>
+                </div>
+                <div class="form-group"> 
+                        <label class= "col-xs-3"> Conform Pass:<sup style="color:#F00">*</sup></label> <input type="password" id="cp"  onblur="chkblnk('cp','error4')"/>
+                        <span class="col" style="color:red" id="error4"></span>
+                </div>
+                    <div class="form-group"> 
+                        <label class= "col-xs-3"> Address:<sup style="color:#F00">*</sup></label> <textarea id="adds" onblur="chkblnk('adds','error5')"></textarea>
+                        <span class="col" style="color:red" id="error5"></span>
+                    </div>
+                     <div class="form-group"> 
+                        <label class= "col-xs-3"> Gender:<sup style="color:#F00">*</sup></label>
+                         <input type="radio" name="gender"  value="Male" onblur="checkgrouperror('gender','error6')">Male
+                         <input type="radio" name="gender"  value= "Female" onblur="checkgrouperror('gender','error6')">Female
+                        <span class="col" style="color:red" id="error6"></span>
+                    </div>
+                    <div class="form-group"> 
+                        <label class= "col-xs-3"> Language:<sup style="color:#F00">*</sup></label> 
+                        <input type="checkbox" name="lang" value="English" onblur="checkgrouperror('lang','error7')">English
+                        <input type="checkbox" name="lang" value="Non-English" onblur="checkgrouperror('lang','error7')">Non-English
+                        <span class="col" style="color:red" id="error7"></span>
+                    </div>
+                    <div class ="col-sm-offset-2 col-sm-10">
+                        <input type = "button" value="Submit" onclick="validate()">
+                         <i style="color:red;font-size:12px;" >* - Mandatory</i>   
+                    </div>
+        </form>
+    </div>     
+</body>
+</html>
