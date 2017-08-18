@@ -9,6 +9,28 @@
     <script src="./src/js/validation.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-default">
+		   <div class="container-fluid">
+				 <div class="navbar-header">
+					<button type = "button" class ="navbar-toggle" data-toggle = "collapse" data-target="#mypage">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">SamplePage</a>
+				</div>
+				<div class="collapse navbar-collapse" id="mypage">
+					<ul class="nav navbar-nav">
+					   <li class="active"><a href="homepage.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+					   <li class="active"><a href="aboutus.html">AboutUs</a></li>
+					   <li class="active"><a href="contact.html">Contact</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+	</nav>
     <div class="container">
         <div class="page-header">
             <h3>Registration Page</h3>
@@ -17,33 +39,44 @@
             <form class="form-horizontal" name= "Form" method="POST"  action= "landingpage.html" onSubmit="return validate();" >
                 <div class="form-group">
                         <label class= "col-xs-4" > Firstname:<sup style="color:#F00">*</sup></label> 
-                        <input type="text" id="fn"  size="30" onblur="chkblnk('fn','error0')"/>
+						<div class= "col-sm-10">
+                        <input type="text" id="fn" class="form-control"  onblur="chkblnk('fn','error0')"/>
                         <span class="col" id="error0" style="color:red"></span>
+						</div>
                 </div>
                 <div class="form-group">    
                         <label class= "col-xs-4"> Lastname:<sup style="color:#F00">*</sup></label>
-						<input type="text" id="ln" size="30" onblur="chkblnk('ln','error1')"/>
+						<div class= "col-sm-10">
+						<input type="text" id="ln" class="form-control"onblur="chkblnk('ln','error1')"/>						
                         <span class="col" id="error1" style="color:red"></span>
+						</div>
                 </div>    
                 <div class="form-group">    
                         <label class= "col-xs-4"> Email id:<sup style="color:#F00">*</sup></label>
-						<input type="text" id="e"  size="30" onblur="chkblnk('e' , 'error2')"/>
+						<div class= "col-sm-10">
+						<input type="text" id="e" class="form-control" onblur="chkblnk('e' , 'error2')"/>					
                         <span class="col" id="error2" style="color:red"></span>
+							</div>
                 </div>   
                 <div class="form-group">   
                        <label class= "col-xs-4"> Password :<sup style="color:#F00">*</sup></label>
-					   <input type="password" id="p" size="30" onblur="chkblnk('p','error3')"/>
-                        <span class="col" id="error3" style="color:red"></span>
+					   <div class= "col-sm-10">
+					   <input type="password" id="p"  class="form-control"  onblur="chkblnk('p','error3')"/>
+                       <span class="col" id="error3" style="color:red"></span>
                 </div>
                 <div class="form-group"> 
                         <label class= "col-xs-4"> Conform Pass:<sup style="color:#F00">*</sup></label>
-						<input type="password" id="cp"  size="30" onblur="chkblnk('cp','error4')"/>
+						<div class= "col-sm-10">
+						<input type="password" id="cp"  class="form-control"   onblur="chkblnk('cp','error4')"/>						
                         <span class="col" style="color:red" id="error4"></span>
+							</div>
                 </div>
                     <div class="form-group"> 
                         <label class= "col-xs-4"> Address:<sup style="color:#F00">*</sup></label>
-						<textarea id="adds" onblur="chkblnk('adds','error5')"></textarea>
+						<div class= "col-sm-10">
+						<textarea id="adds"  class="form-control" onblur="chkblnk('adds','error5')"></textarea>						
                         <span class="col" style="color:red" id="error5"></span>
+						</div>
                     </div>
                      <div class="form-group"> 
                         <label class= "col-xs-4"> Gender:<sup style="color:#F00">*</sup></label>
@@ -53,13 +86,13 @@
                     </div>
                     <div class="form-group"> 
                         <label class= "col-xs-4"> Language:<sup style="color:#F00">*</sup></label> 
-                        <input type="checkbox" name="lang" value="English" onblur="checkgrouperror('lang','error7')">English
-                        <input type="checkbox" name="lang" value="Non-English" onblur="checkgrouperror('lang','error7')">Non-English
+                        <input type="checkbox" name="lang" value="English"   onblur="checkgrouperror('lang','error7')">English
+                        <input type="checkbox" name="lang" value="Non-English"  onblur="checkgrouperror('lang','error7')">Non-English
                         <span class="col" style="color:red" id="error7"></span>
                     </div>
                     <div class ="col-sm-offset-2 col-sm-10">
-                        <input type = "button" value="Submit" onclick="validate()">
-						<input action="action" onclick="window.history.go(-1); return false;" type="button" value="Back" />
+                        <input type = "button" value="Submit"  class="btn btn-primary" onclick="validate()">
+						<input action="action"  class="btn btn-default" onclick="window.history.go(-1); return false;" type="button" value="Back" />
                         <i style="color:red;font-size:12px;" >* - Mandatory</i> 						
                     </div>
             </form>
