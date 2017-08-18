@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Aboutus</title>
+	  <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+	 <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         <div class="navbar-header">
+			<button type = "button" class ="navbar-toggle" data-toggle = "collapse" data-target="#mypage">
+				<span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+		    </button>
+		   <a class="navbar-brand" href="#">SamplePage</a>
+		 </div>
+		    <div class="collapse navbar-collapse" id="mypage">
+			  <ul class="nav navbar-nav">
+			   <li class="active"><a href="homepage.html"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+			   <li class="active"><a href="aboutus.html">AboutUs</a></li>
+			   <li class="active"><a href="contact.html">Contact</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			  </ul>
+		    </div>
+		</div>
+      </nav>
+	 <div class="container">
+		<div class="well">
+			<form id="contact_form" action="#" method="POST" >
+				<div class="row">
+					<label for="name">Your name:</label><br />
+					<input id="name" class="input" name="name" type="text" value="" size="25" /><br />
+				</div>
+				<div class="row">
+					<label for="email">Your email:</label><br />
+					<input id="email" class="input" name="email" type="text" value="" size="25" /><br />
+				</div>
+				<div class="row">
+					<label for="message">Your message:</label><br />
+					<textarea id="message" class="input" name="message" rows="7" cols="25"></textarea><br />
+				</div>
+				<input id="submit_button" type="submit" value="Send email" />
+			</form>	
+		</div>
+	 </div>					
+	</body>
+</html>
